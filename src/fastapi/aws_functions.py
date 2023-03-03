@@ -10,14 +10,22 @@ class aws_function():
         #loading env variables
         load_dotenv()
         # Define the AWS access key and secret
-        self.aws_access_key_id = os.environ.get('AWS_ACCESS_KEY_ID')
-        self.aws_secret_access_key = os.environ.get('AWS_SECRET_ACCESS_KEY')
-        self.logGroupName=os.environ.get('LOG_GROUP_NAME')
-        self.logStreamNameFileCopy=os.environ.get('LOG_STREAM_NAME_FILE_COPY')
-        self.logStreamNameFastApi=os.environ.get('LOG_STREAM_NAME_FAST_API')
-        self.logStreamNameDefault=os.environ.get('LOG_STREAM_NAME_DEFAULT')
-        self.logStreamNameStreamlit=os.environ.get('LOG_STREAM_NAME_STREAMLIT')
-        self.bucket_name=os.environ.get('MY_BUCKET_NAME')
+        # self.aws_access_key_id = os.environ.get('AWS_ACCESS_KEY_ID')
+        # self.aws_secret_access_key = os.environ.get('AWS_SECRET_ACCESS_KEY')
+        # self.logGroupName=os.environ.get('LOG_GROUP_NAME')
+        # self.logStreamNameFileCopy=os.environ.get('LOG_STREAM_NAME_FILE_COPY')
+        # self.logStreamNameFastApi=os.environ.get('LOG_STREAM_NAME_FAST_API')
+        # self.logStreamNameDefault=os.environ.get('LOG_STREAM_NAME_DEFAULT')
+        # self.logStreamNameStreamlit=os.environ.get('LOG_STREAM_NAME_STREAMLIT')
+        # self.bucket_name=os.environ.get('MY_BUCKET_NAME')
+        self.aws_access_key_id =  'AKIA3EJL4FYTYIVR2I5Z' #os.environ.get('AWS_ACCESS_KEY_ID')
+        self.aws_secret_access_key = "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"  #os.environ.get('AWS_SECRET_ACCESS_KEY')
+        self.logGroupName='damg7245_assignment_3'# os.environ.get('LOG_GROUP_NAME')
+        self.logStreamNameFileCopy='file_copy_aws' #os.environ.get('LOG_STREAM_NAME_FILE_COPY')
+        self.logStreamNameFastApi='fast_api' #os.environ.get('LOG_STREAM_NAME_FAST_API')
+        self.logStreamNameDefault='default'#os.environ.get('LOG_STREAM_NAME_DEFAULT')
+        self.logStreamNameStreamlit='streamlit'#os.environ.get('LOG_STREAM_NAME_STREAMLIT')
+        self.bucket_name='damg7245-s3-storage'#os.environ.get('MY_BUCKET_NAME')
     # Create an S3 client using the access key and secret
     def init_resources(self):
         cloudwatch = boto3.client('logs', 
