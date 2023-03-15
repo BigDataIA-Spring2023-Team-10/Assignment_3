@@ -14,9 +14,7 @@
 
 
 
-# Application link
 
-[Live Application Page](https://bigdataia-spring2023-team-10-assignment-1-streamlithome-t6rxsk.streamlit.app/) :rocket:
 
 
 
